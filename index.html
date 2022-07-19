@@ -86,9 +86,10 @@ function sendMessages(text) {
             });
         }
 
-        const params = (new URL(document.location)).searchParams;
-        const key = params.get('key');
-
+//         const params = (new URL(document.location)).searchParams;
+//         const key = params.get('key');
+        const myDelim="...\n"
+        
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
@@ -96,7 +97,7 @@ function sendMessages(text) {
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const msg = `${name}${myDelim}${udetate}${myDelim}${fukkin}${myDelim}${haikin}${myDelim}${sukuwat}`;
                 sendText(msg);
                 return false;
             });

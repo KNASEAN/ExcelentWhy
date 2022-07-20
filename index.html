@@ -88,7 +88,10 @@ function sendMessages(text) {
 
 //         const params = (new URL(document.location)).searchParams;
 //         const key = params.get('key');
+        
         const myDelim="\n...\n"
+        const myAppHeader="AppnName : "
+        const myAppName="Excellent_Why"
         
         $(function () {
             $('form').submit(function () {
@@ -97,7 +100,7 @@ function sendMessages(text) {
                 const fukkin  = $('input[name="fukkin"]').val();
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}${myDelim}${udetate}${myDelim}${fukkin}${myDelim}${haikin}${myDelim}${sukuwat}`;
+                const msg = `${myAppHeader}${myAppName}${myDelim}${name}${myDelim}${udetate}${myDelim}${fukkin}${myDelim}${haikin}${myDelim}${sukuwat}`;
                 sendText(msg);
                 return false;
             });

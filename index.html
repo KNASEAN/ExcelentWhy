@@ -101,6 +101,9 @@ function sendMessages(text) {
                 const haikin  = $('input[name="haikin"]').val();
                 const sukuwat = $('input[name="sukuwat"]').val();
                 const msg = `${myAppHeader}${myAppName}${myDelim}${name}${myDelim}${udetate}${myDelim}${fukkin}${myDelim}${haikin}${myDelim}${sukuwat}`;
+              
+                const name =  $('#name');
+              
                 sendText(msg);
                 return false;
             });

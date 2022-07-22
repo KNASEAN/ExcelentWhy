@@ -21,17 +21,17 @@ index.html
         <div>
             <input class="form-control w-100 mt-1" name="dept" id="dept" required>
         </div>
-        <p class="mt-3">腹筋</p>
+        <p class="mt-3">Employee_Location</p>
         <div>
-            <input class="form-control w-100 mt-1" name="fukkin" required>
+            <input class="form-control w-100 mt-1" name="loc" id="loc" required>
         </div>
-        <p class="mt-3">背筋</p>
+        <p class="mt-3">kind</p>
         <div>
-            <input class="form-control w-100 mt-1" name="haikin" required>
+            <input class="form-control w-100 mt-1" name="kind" id="kind" required>
         </div>
-        <p class="mt-3">スクワット</p>
+        <p class="mt-3">Description</p>
         <div>
-            <input class="form-control w-100 mt-1" name="sukuwat" required>
+            <input class="form-control w-100 mt-1" name="desc" id="desc" required>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -77,9 +77,9 @@ index.html
             $('form').submit(function () {
                 const name    = $('#name').val();
                 const dept = $('#dept').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
+                const loc  = $('#loc').val();
+                const kind  = $('#kind').val();
+                const desc = $('#desc').val();
                 const msg = `${name}\n${dept}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
                 return false;

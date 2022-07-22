@@ -96,19 +96,20 @@ function sendMessages(text) {
         
         $(function () {
             $('form').submit(function () {
-//                 const name    = $('input[name="name"]').val();
-//                 const udetate = $('input[name="udetate"]').val();
-//                 const fukkin  = $('input[name="fukkin"]').val();
-//                 const haikin  = $('input[name="haikin"]').val();
-//                 const sukuwat = $('input[name="sukuwat"]').val();
-//                 const msg = `${myAppHeader}${myAppName}${myDelim}${name}${myDelim}${udetate}${myDelim}${fukkin}${myDelim}${haikin}${myDelim}${sukuwat}`;
-              
-                const name =  $('#name');
-                const loc =  $('#loc');
-                const dept =  $('#dept');
-                const kind =  $('#kind');
-                const memo =  $('#memo');
-                const msg='${myAppHeader}:${myAppName}\n'
+                const name    = $('input[name="name"]').val();
+                const udetate = $('input[name="loc"]').val();
+                const fukkin  = $('input[name="dept"]').val();
+                const haikin  = $('input[name="kind"]').val();
+                const sukuwat = $('input[name="memo"]').val();
+                const kind =  $('#kind');    
+                const msg = `${myAppHeader}${myAppName}${myDelim}${name}${myDelim}${udetate}${myDelim}${fukkin}${myDelim}${haikin}${myDelim}${sukuwat}${kind}`;
+
+//                const name =  $('#name');
+//                const loc =  $('#loc');
+//                const dept =  $('#dept');
+//                const kind =  $('#kind');
+//                const memo =  $('#memo');
+//                const msg='${myAppHeader}:${myAppName}\n'
                       msg+='loc:${loc}\n'
                       msg+='dept:${dept}\n'
                       msg+='kind:${kind}\n'

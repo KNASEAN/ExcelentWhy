@@ -85,7 +85,7 @@ index.html
                 const loc  = $('#loc').val();
                 const kind  =$('input[name="kind"]:checked').val();
                 const desc = $('#desc').val();
-                const msg = `appname:good_notgood,\nname:${name},\ndept:${dept},\nloc:${loc},\nkind:${kind},\ndesc:${desc}`;
+                const msg = `"appname":"good_notgood",\n"name":"${name}",\n"dept":"${dept}",\n"loc":"${loc}",\n"kind":"${kind}",\n"desc":"${desc}"`;
                 sendText(msg);
                 return false;
             });
